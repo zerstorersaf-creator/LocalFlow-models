@@ -1,0 +1,22 @@
+LocalFlow experimental Singapore-trained speech models
+
+Whisper Small Singlish: Ming Jie Wong (publisher mjwong), Apache License 2.0.
+Original: https://huggingface.co/mjwong/whisper-small-singlish
+Revision: 048604a6731fa71b08895a3dd13fb12436381824
+
+Whisper Small Sing2Eng transcription: publisher ivabojic / Singlish2English project,
+MIT licence declared by the original model card.
+Original: https://huggingface.co/ivabojic/whisper-small-sing2eng-transcribe
+Revision: 0835ed29d2f8893e4fcf63d5ac531dcb086b6ee1
+Project: https://github.com/IvaBojic/Singlish2English
+
+Both are based on OpenAI Whisper Small (MIT, Copyright (c) 2022 OpenAI).
+LocalFlow modifications: HF safetensors converted to GGML with whisper.cpp v1.9.4;
+decoder context 448; original FP32 small tensors preserved; larger tensors FP16;
+mobile files quantized to Q5_1. No additional training or accuracy claim.
+
+Model weights are optional downloads, not part of the APK. English transcription
+is forced for these experimental models. No Mandarin/code-switch support or
+Samsung speed/accuracy is claimed. Compare raw results before relying on them.
+The original model cards and conversion records are retained in docs/models.
+Full base-model MIT and Apache-2.0 licence texts accompany this notice.

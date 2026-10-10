@@ -1,0 +1,29 @@
+{
+  "repository": "mjwong/whisper-small-singlish",
+  "revision": "048604a6731fa71b08895a3dd13fb12436381824",
+  "checkpoint_sha256": "d7937724510d7d0ea8c4f0cc54e94aa07e8eec611c267977523b9c60bb7b0b60",
+  "whisper_cpp_commit": "927cfce34f31707e17f2bff35c349632fb9e2c3a",
+  "converter_sha256": "9cc282dfcd9a24da03ffa1b4123b5508ee935e19e369c33520b1a73f89440094",
+  "conversion_fix": "Preserve f32 small tensors; decoder context remains 448",
+  "quantization": "q5_1",
+  "torch": "2.6.0+cpu",
+  "transformers": "4.48.3",
+  "numpy": "2.2.6",
+  "filename": "ggml-small-singlish-q5_1.bin",
+  "bytes": 190085504,
+  "sha256": "6641aa3e82a34a4ef4ea653d555d859025e263cbe3985f6489e47cc578cf2667",
+  "fp16_sha256": "9f79e96c9882c8c10cb3bac270601de5f0e7e3ba538b7f514590e1e87a7eb4d4",
+  "source_files": {
+    "README.md": "80ef4d835aec984fc688b1ded38c57e8dcce60c3496aab342b29d72a094e6bca",
+    "added_tokens.json": "9715fd2243b6f06a5858b5e32950d2853f73dd5bc201aafcf76f5082a2d8acd1",
+    "config.json": "4334348825ba7a09ee013805469e52c8f098f35a1490db25f3ec2b4a0c733dcb",
+    "generation_config.json": "445fa0dc13ccd9da93f91285f80eb92b1ab1ef7376a034a15a4c43f36ff62ec3",
+    "merges.txt": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+    "model.safetensors": "d7937724510d7d0ea8c4f0cc54e94aa07e8eec611c267977523b9c60bb7b0b60",
+    "normalizer.json": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+    "preprocessor_config.json": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d",
+    "special_tokens_map.json": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
+    "tokenizer_config.json": "21a4fc0483c14b87f4e0bbc177a9a357479bfa7c95aaf21ad53d71e9c5afafb9",
+    "vocab.json": "50d6a919f0a0601d56a04eb583c780d18553aa388254ba3158eb6a00f13e2c1a"
+  }
+}
