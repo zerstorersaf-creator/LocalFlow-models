@@ -1,0 +1,25 @@
+name: Verify public model downloads
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/verify-downloads.yml'
+      - 'scripts/verify-downloads.py'
+      - 'singapore-whisper-v1/*manifest.json'
+      - 'singapore-whisper-v1/public-download-validation.json'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Verify anonymous downloads, resume and integrity
+        run: python3 scripts/verify-downloads.py --output "$RUNNER_TEMP/localflow-model-readback"

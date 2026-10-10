@@ -1,0 +1,11 @@
+# Local downloads, credentials and generated files
+__pycache__/
+*.pyc
+.downloads/
+.env
+.env.*
+*.p12
+*.jks
+*.keystore
+*.password
+*.apk
