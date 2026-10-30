@@ -39,9 +39,13 @@ def verify_entry(label, filename, url, expected_bytes, expected_sha, output_dir)
             digest.update(block)
             output.write(block)
             
-    if count != expected_bytes or digest.hexdigest() != expected_sha:
+    if count != expected_bytes:
         destination.unlink(missing_ok=True)
-        raise ValueError(f"Download integrity failed for {label}: count={count} (expected {expected_bytes}), sha={digest.hexdigest()} (expected {expected_sha})")
+        raise ValueError(f"Download size mismatch for {label}: count={count} (expected {expected_bytes})")
+        
+    if expected_sha is not None and digest.hexdigest().lower() != expected_sha.lower():
+        destination.unlink(missing_ok=True)
+        raise ValueError(f"Download SHA mismatch for {label}: sha={digest.hexdigest()} (expected {expected_sha})")
         
     print(f"[{label}] Verified anonymous download, resume, and SHA-256 successfully!", flush=True)
     return {
@@ -72,13 +76,35 @@ def main():
             prefix = manifest_data["distribution_prefix"]
             for m in manifest_data["models"]:
                 if m.get("distribution_parts"):
+                    part_files = []
                     for part in m["distribution_parts"]:
                         p_label = f"{m['id']}-part{part['part']}"
                         p_url = part["distribution_url"]
-                        # Note: individual part verification tests range resume and length
-                        # Full SHA is tested upon reassembly
-                        res = verify_entry(p_label, part["filename"], p_url, part["bytes"], None, args.output)
+                        res = verify_entry(p_label, part["filename"], p_url, part["bytes"], part.get("sha256"), args.output)
                         results[p_label] = res
+                        part_files.append(args.output / part["filename"])
+                        
+                    # Test reassembly
+                    combined_path = args.output / m["filename"]
+                    print(f"[{m['id']}] Reassembling {len(part_files)} parts into {m['filename']}...", flush=True)
+                    h_comb = hashlib.sha256()
+                    with combined_path.open("wb") as fout:
+                        for p_path in part_files:
+                            with p_path.open("rb") as fin:
+                                while chunk := fin.read(1024 * 1024 * 8):
+                                    fout.write(chunk)
+                                    h_comb.update(chunk)
+                    comb_sha = h_comb.hexdigest()
+                    comb_size = combined_path.stat().st_size
+                    assert comb_size == m["bytes"], f"Reassembled size mismatch: {comb_size} != {m['bytes']}"
+                    assert comb_sha.lower() == m["sha256"].lower(), f"Reassembled SHA mismatch: {comb_sha} != {m['sha256']}"
+                    print(f"[{m['id']}] Reassembly verified successfully! SHA-256 matches: {comb_sha}", flush=True)
+                    results[m["id"]] = {
+                        "filename": m["filename"],
+                        "bytes": comb_size,
+                        "sha256": comb_sha,
+                        "reassembly": "passed"
+                    }
                 else:
                     url = prefix + m["filename"]
                     res = verify_entry(m["id"], m["filename"], url, m["bytes"], m["sha256"], args.output)
