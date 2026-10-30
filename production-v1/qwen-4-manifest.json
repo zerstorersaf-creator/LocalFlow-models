@@ -1,0 +1,31 @@
+{
+  "id": "qwen-4",
+  "name": "Qwen3 4B Long-Form Structuring Q4_0",
+  "runtime": "llama.cpp",
+  "kind": "CLEANUP",
+  "license": "Apache-2.0",
+  "upstream_repository": "unsloth/Qwen3-4B-GGUF",
+  "filename": "Qwen3-4B-Q4_0.gguf",
+  "bytes": 2375773312,
+  "sha256": "bd3ca6c0af689d5c396b8a7c7ac121fca58a687cb8b0e71f01e2611ac9358903",
+  "context_length": 8192,
+  "quantization": "Q4_0",
+  "distribution_parts": [
+    {
+      "part": 1,
+      "filename": "Qwen3-4B-Q4_0.gguf.part1",
+      "bytes": 1258291200,
+      "distribution_url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-4B-Q4_0.gguf.part1"
+    },
+    {
+      "part": 2,
+      "filename": "Qwen3-4B-Q4_0.gguf.part2",
+      "bytes": 1117482112,
+      "distribution_url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-4B-Q4_0.gguf.part2"
+    }
+  ],
+  "reassembly": {
+    "windows": "copy /b Qwen3-4B-Q4_0.gguf.part1 + Qwen3-4B-Q4_0.gguf.part2 Qwen3-4B-Q4_0.gguf",
+    "posix": "cat Qwen3-4B-Q4_0.gguf.part1 Qwen3-4B-Q4_0.gguf.part2 > Qwen3-4B-Q4_0.gguf"
+  }
+}

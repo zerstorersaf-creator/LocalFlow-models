@@ -1,0 +1,57 @@
+{
+  "release_tag": "production-v1",
+  "generated_at": "2026-10-30T17:55:00+08:00",
+  "distribution_prefix": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/",
+  "models": [
+    {
+      "id": "sherpa-zh-en",
+      "title": "SenseVoice Multilingual",
+      "filename": "sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17.tar.bz2",
+      "bytes": 163002883,
+      "sha256": "7d1efa2138a65b0b488df37f8b89e3d91a60676e416f515b952358d83dfd347e",
+      "kind": "SPEECH",
+      "license": "Apache-2.0",
+      "description": "Sherpa SenseVoice multilingual speech recognition (Mandarin, Cantonese, English, Japanese, Korean) with punctuation and emotion tags"
+    },
+    {
+      "id": "qwen-0.6",
+      "title": "Qwen3 0.6B Disfluency Cleanup",
+      "filename": "Qwen3-0.6B-Q4_0.gguf",
+      "bytes": 428970080,
+      "sha256": "da2572f16c06133561ce56accaa822216f2391ef4d37fba427801cd6736417d4",
+      "kind": "CLEANUP",
+      "license": "Apache-2.0",
+      "description": "Qwen3 0.6B 4-bit quantized GGUF for on-device voice typing text cleanup, grammar formatting, and stutter removal"
+    },
+    {
+      "id": "qwen-asr",
+      "title": "Qwen3-ASR 0.6B Multilingual",
+      "filename": "sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25.tar.bz2",
+      "bytes": 878702423,
+      "sha256": "393f8a14e2f5fb96746aaab342997a40641001fbd5bf9592a080a8329178ee96",
+      "kind": "SPEECH",
+      "license": "Apache-2.0",
+      "description": "Sherpa Qwen3-ASR 0.6B foundation speech recognition model (Chinese, English, Cantonese)"
+    },
+    {
+      "id": "qwen-1.7",
+      "title": "Qwen3 1.7B High-Capacity Polish",
+      "filename": "Qwen3-1.7B-Q4_0.gguf",
+      "bytes": 1056782912,
+      "sha256": "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5",
+      "kind": "CLEANUP",
+      "license": "Apache-2.0",
+      "description": "Qwen3 1.7B 4-bit quantized GGUF for complex document restructuring, formal polishing, and bilingual translation"
+    },
+    {
+      "id": "qwen-4",
+      "title": "Qwen3 4B Long-Form Structuring",
+      "filename": "Qwen3-4B-Q4_0.gguf",
+      "bytes": 2375773312,
+      "sha256": "bd3ca6c0af689d5c396b8a7c7ac121fca58a687cb8b0e71f01e2611ac9358903",
+      "kind": "CLEANUP",
+      "license": "Apache-2.0",
+      "description": "Qwen3 4B 4-bit quantized GGUF for high-capacity long-form document synthesis (split into .part1 and .part2 for GitHub distribution)"
+    }
+  ]
+}

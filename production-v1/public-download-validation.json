@@ -1,0 +1,48 @@
+{
+  "sherpa-zh-en": {
+    "filename": "sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17.tar.bz2",
+    "url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17.tar.bz2",
+    "bytes": 163002883,
+    "sha256": "7d1efa2138a65b0b488df37f8b89e3d91a60676e416f515b952358d83dfd347e",
+    "anonymous_get": "passed",
+    "interrupted_range_resume": "passed"
+  },
+  "qwen-0.6": {
+    "filename": "Qwen3-0.6B-Q4_0.gguf",
+    "url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-0.6B-Q4_0.gguf",
+    "bytes": 428970080,
+    "sha256": "da2572f16c06133561ce56accaa822216f2391ef4d37fba427801cd6736417d4",
+    "anonymous_get": "passed",
+    "interrupted_range_resume": "passed"
+  },
+  "qwen-asr": {
+    "filename": "sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25.tar.bz2",
+    "url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25.tar.bz2",
+    "bytes": 878702423,
+    "sha256": "393f8a14e2f5fb96746aaab342997a40641001fbd5bf9592a080a8329178ee96",
+    "anonymous_get": "passed",
+    "interrupted_range_resume": "passed"
+  },
+  "qwen-1.7": {
+    "filename": "Qwen3-1.7B-Q4_0.gguf",
+    "url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-1.7B-Q4_0.gguf",
+    "bytes": 1056782912,
+    "sha256": "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5",
+    "anonymous_get": "passed",
+    "interrupted_range_resume": "passed"
+  },
+  "qwen-4-part1": {
+    "filename": "Qwen3-4B-Q4_0.gguf.part1",
+    "url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-4B-Q4_0.gguf.part1",
+    "bytes": 1258291200,
+    "anonymous_get": "passed",
+    "interrupted_range_resume": "passed"
+  },
+  "qwen-4-part2": {
+    "filename": "Qwen3-4B-Q4_0.gguf.part2",
+    "url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-4B-Q4_0.gguf.part2",
+    "bytes": 1117482112,
+    "anonymous_get": "passed",
+    "interrupted_range_resume": "passed"
+  }
+}

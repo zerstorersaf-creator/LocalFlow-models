@@ -1,0 +1,14 @@
+{
+  "id": "qwen-1.7",
+  "name": "Qwen3 1.7B High-Capacity Polish Q4_0",
+  "runtime": "llama.cpp",
+  "kind": "CLEANUP",
+  "license": "Apache-2.0",
+  "upstream_repository": "unsloth/Qwen3-1.7B-GGUF",
+  "filename": "Qwen3-1.7B-Q4_0.gguf",
+  "bytes": 1056782912,
+  "sha256": "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5",
+  "context_length": 4096,
+  "quantization": "Q4_0",
+  "distribution_url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-1.7B-Q4_0.gguf"
+}

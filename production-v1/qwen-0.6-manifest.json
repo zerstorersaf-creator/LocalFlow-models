@@ -1,0 +1,14 @@
+{
+  "id": "qwen-0.6",
+  "name": "Qwen3 0.6B Disfluency Cleanup Q4_0",
+  "runtime": "llama.cpp",
+  "kind": "CLEANUP",
+  "license": "Apache-2.0",
+  "upstream_repository": "ggml-org/Qwen3-0.6B-GGUF",
+  "filename": "Qwen3-0.6B-Q4_0.gguf",
+  "bytes": 428970080,
+  "sha256": "da2572f16c06133561ce56accaa822216f2391ef4d37fba427801cd6736417d4",
+  "context_length": 4096,
+  "quantization": "Q4_0",
+  "distribution_url": "https://github.com/zerstorersaf-creator/LocalFlow-models/releases/download/production-v1/Qwen3-0.6B-Q4_0.gguf"
+}
